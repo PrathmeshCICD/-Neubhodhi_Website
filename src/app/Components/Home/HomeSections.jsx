@@ -2,13 +2,13 @@ export default function HomeSections() {
   return (
     <div className="w-full">
       {/* HERO SECTION */}
-      <section className="container overflow-hidden pt-[120px] px-6 sm:px-10 md:px-20 pb-32 md:pb-80">
+      <section className="relative w-full overflow-hidden pt-[120px] px-6 sm:px-10 md:px-20 pb-32 md:pb-80">
         {/* Spline 3D Background */}
         <iframe
           src="https://my.spline.design/nexbotrobotcharacterconcept-IP7BPCreV9vG8CUbN1XkQch0/"
           frameBorder="0"
           allow="autoplay; fullscreen"
-          className="spline-bg"
+          className="absolute inset-0 w-full h-full border-0"
         ></iframe>
 
         {/* Hero Content */}
@@ -46,7 +46,7 @@ export default function HomeSections() {
           Who are we?
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 h-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-20 h-auto">
           {/* LEFT */}
           <div className="pt-[39px]">
             <p className="self-stretch mb-8 text-zinc-900 text-xl font-light font-['Exo_2'] leading-8 pl-2 sm:pl-0">
@@ -72,7 +72,7 @@ export default function HomeSections() {
           <div className="flex flex-col gap-14 pl-0 sm:pl-10 md:pl-10">
             {["Intelligence", "Robotics", "Business"].map((item) => (
               <div key={item} className="flex items-end gap-3 max-w-full overflow-hidden">
-                <div className="w-10 text-right text-neutral-400 text-base font-light font-['Exo_2']">
+                <div className="w-10 text-right text-neutral-400 pb-1 text-base font-light font-['Exo_2']">
                   your
                 </div>
                 <div className="w-full max-w-full sm:max-w-[384px]">

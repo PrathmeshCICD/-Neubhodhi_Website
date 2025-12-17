@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className="w-full bg-transparent">
-      <div className="mx-auto max-w-7xl flex items-center justify-between px-4 sm:px-6 md:px-20 py-6 gap-x-4 sm:gap-x-6 md:gap-x-12">
+      <div className="mx-auto max-w-7xl flex items-center justify-between px-4 sm:px-6 md:px-0 py-6 gap-x-4 sm:gap-x-6 md:gap-x-12">
         
         {/* LEFT: Logo + Name */}
         <div className="flex items-center gap-2 shrink-0">
@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link href="/" className="text-zinc-900 text-base font-normal font-exo2">
             Home
           </Link>
-          
+
           <Link href="/projects" className="text-neutral-400 hover:text-zinc-900 text-base font-normal font-exo2">
             Projects
           </Link>
