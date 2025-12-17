@@ -11,58 +11,42 @@ on:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     permissions:
       id-token: write
       contents: read
     steps:
-      # Checkout the repository
+      # 1️⃣ Checkout repository
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
 
-      # Set Node.js version 20
+      # 2️⃣ Setup Node.js version 20
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-      # Install OIDC Client
-      - name: Install OIDC Client from Core Package
-        run: npm install @actions/core@1.6.0 @actions/http-client
-
-      # Get GitHub Id Token for Azure authentication
-      - name: Get Id Token
-        uses: actions/github-script@v6
-        id: idtoken
-        with:
-          script: |
-            const core = require('@actions/core');
-            return await core.getIDToken();
-          result-encoding: string
-
-      # Install project dependencies
+      # 3️⃣ Install project dependencies
       - name: Install Dependencies
         run: npm install
 
-      # Build Next.js static site
+      # 4️⃣ Build Next.js static site
       - name: Build App
         run: npm run build
 
-      # Deploy to Azure Static Web Apps
+      # 5️⃣ Deploy to Azure Static Web Apps
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ github/workflows/azure-static-web-apps-thankful-sky-0e6bf0c1e.yml}}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_THANKFUL_SKY }}
           action: "upload"
           app_location: "/"          # Root of your Next.js app
           api_location: ""           # Leave empty if no Azure Functions
           output_location: "build"   # Folder created by next build/export
-          github_id_token: ${{ steps.idtoken.outputs.result }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -70,8 +54,6 @@ jobs:
     name: Close Pull Request Job
     steps:
       - name: Close Pull Request
-        id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
           action: "close"
-
