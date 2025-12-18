@@ -24,7 +24,7 @@ export default function ISACASection() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hover:"
           />
 
         </div>

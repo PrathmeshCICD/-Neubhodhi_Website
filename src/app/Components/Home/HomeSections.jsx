@@ -2,17 +2,17 @@ export default function HomeSections() {
   return (
     <div className="w-full">
       {/* HERO SECTION */}
-      <section className="relative w-full overflow-hidden pt-[120px] px-6 sm:px-10 md:px-20 pb-32 md:pb-80">
+      <section className="relative w-full pt-[5px] px-6 sm:px-10 md:px-20 pb-32 md:pb-20">
         {/* Spline 3D Background */}
         <iframe
           src="https://my.spline.design/nexbotrobotcharacterconcept-IP7BPCreV9vG8CUbN1XkQch0/"
           frameBorder="0"
           allow="autoplay; fullscreen"
-          className="absolute inset-0 w-full h-full border-0"
+          className="spline-bg"
         ></iframe>
 
         {/* Hero Content */}
-        <div className="content max-w-[544px] w-full">
+        <div className="content w-full">
           <h1 className="text-zinc-900 text-6xl font-bold font-['Orbitron'] mb-4 leading-20">
             Artificial <br />
             Intelligence & <br />
@@ -41,15 +41,15 @@ export default function HomeSections() {
       <div className="w-full mb-[60px]" />
 
       {/* WHO ARE WE SECTION */}
-      <section className="pt-[60px] px-6 sm:px-10 md:px-20 pb-20">
+      <section className="px-6 sm:px-10 md:px-20 pb-20">
         <h2 className="text-center text-zinc-900 text-4xl sm:text-5xl font-bold font-['Orbitron'] mb-20 pl-12 sm:pl-0">
           Who are we?
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-20 h-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-20 h-auto pl-10">
           {/* LEFT */}
-          <div className="pt-[39px]">
-            <p className="self-stretch mb-8 text-zinc-900 text-xl font-light font-['Exo_2'] leading-8 pl-2 sm:pl-0">
+          <div className="items-start pt-[39px]">
+            <p className="self-stretch mb-8 text-zinc-900 text-xl font-light font-['Exo_2'] leading-8 pl-8 sm:pl-0">
               At NeuBodhi, we believe intelligence is the foundation of progress.
               By combining advanced artificial intelligence with cutting-edge
               robotics, we create solutions that go beyond automation — they
@@ -69,9 +69,9 @@ export default function HomeSections() {
           </div>
 
           {/* RIGHT */}
-          <div className="flex flex-col gap-14 pl-0 sm:pl-10 md:pl-10">
+          <div className="flex flex-col gap-14 pl-[150px] ">
             {["Intelligence", "Robotics", "Business"].map((item) => (
-              <div key={item} className="flex items-end gap-3 max-w-full overflow-hidden">
+              <div key={item} className="flex items-end gap-3 max-w-full ">
                 <div className="w-10 text-right text-neutral-400 pb-1 text-base font-light font-['Exo_2']">
                   your
                 </div>
@@ -91,5 +91,3 @@ export default function HomeSections() {
     </div>
   );
 }
-
-

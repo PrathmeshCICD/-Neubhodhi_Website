@@ -1,6 +1,7 @@
 import {Exo_2, Orbitron } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 const exo2 = Exo_2({
   variable: "--font-exo2",
@@ -26,7 +27,10 @@ export default function RootLayout({ children }) {
         className={`${exo2.variable} ${orbitron.variable} antialiased bg-[#F8F8FF] overflow-x-hidden`}
       >
         <Navbar />
+        
         {children}
+
+        <Footer />
       </body>
     </html>
   );
