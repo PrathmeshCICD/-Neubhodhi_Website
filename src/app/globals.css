@@ -14,29 +14,6 @@
   font-family: var(--font-exo2);
 }
 
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* Optional CSS variable */
-:root {
-  --font-gilroy: 'Gilroy', sans-serif;
-}
-
-/* Utility class to use Gilroy anywhere */
-.font-gilroy {
-  font-family: var(--font-gilroy);
-}
 
 /*---break---*/
 
