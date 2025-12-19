@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="w-full pt-20 px-20 pb-10">
-      <div className="flex justify-between items-start gap-16">
+      <div className="flex flex-col md:flex-row md:justify-between gap-10 ">
 
         {/* Left block */}
         <div className="max-w-xs flex flex-col gap-6">
@@ -37,9 +37,9 @@ export default function Footer() {
         </div>
 
         {/* Links */}
-        <div className="flex gap-24">
+        <div className="flex flex-wrap md:flex-nowrap gap-8 md:gap-24 mt-6 md:mt-0">
 
-          <div>
+          <div className="flex flex-col md:block">
             <p className="font-gilroy text-gray-600 mb-3">Company</p>
             <ul className="space-y-2 text-gray-900 text-base font-normal font-['Exo_2'] leading-10">
               <li>About us</li>
@@ -48,7 +48,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col md:block">
             <p className="font-gilroy text-gray-600 mb-3">Product</p>
             <ul className="space-y-2 text-gray-900 text-base font-normal font-['Exo_2'] leading-10">
               <li>Features</li>
@@ -58,7 +58,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col md:block">
             <p className="font-gilroy text-gray-600 mb-3">Services</p>
             <ul className="space-y-2 text-gray-900 text-base font-normal font-['Exo_2'] leading-10">
               <li>Robotics</li>
@@ -67,7 +67,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col md:block">
             <p className="font-gilroy text-gray-600 mb-3">Legal</p>
             <ul className="space-y-2 text-gray-900 text-base font-normal font-['Exo_2'] leading-10">
               <li>Privacy Policy</li>

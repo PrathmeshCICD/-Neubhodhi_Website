@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HomeSections() {
   return (
     <div className="w-full">
@@ -8,12 +10,12 @@ export default function HomeSections() {
           src="https://my.spline.design/nexbotrobotcharacterconcept-IP7BPCreV9vG8CUbN1XkQch0/"
           frameBorder="0"
           allow="autoplay; fullscreen"
-          className="spline-bg"
+          className="spline-bg hidden md:block"
         ></iframe>
 
         {/* Hero Content */}
-        <div className="content w-full">
-          <h1 className="text-zinc-900 text-6xl font-bold font-['Orbitron'] mb-4 leading-20">
+        <div className="content w-full animate-slide-in-left md:pl-0 pl-4">
+          <h1 className="text-zinc-900 text-5xl sm:text-5xl md:text-6xl font-bold font-['Orbitron'] mb-4 leading-16 sm:leading-18 md:leading-20">
             Artificial <br />
             Intelligence & <br />
             Robotics
@@ -26,6 +28,8 @@ export default function HomeSections() {
             </p>
           </div>
 
+          <Link href="/ContactUs">
+
           <button className="group relative flex items-center justify-center p-4 gap-2 rounded-xl border-2 border-[#D9D9D9] bg-[#1B1B1B] text-zinc-300 shadow-[4px_4px_10px_rgba(72,74,184,0.25)] hover:bg-gray-900 transition-all duration-300">
             <span className="text-xl pr-6 transition-all duration-300 group-hover:opacity-0 group-hover:-translate-x-3">
               Learn More
@@ -34,6 +38,7 @@ export default function HomeSections() {
               ➜
             </span>
           </button>
+          </Link>
         </div>
       </section>
 
@@ -58,6 +63,8 @@ export default function HomeSections() {
               drive innovation that shapes the future of technology. Whether it’s building smarter machines, streamlining industries, or advancing research, NeuBodhi stands at the intersection of science and possibility.
             </p>
 
+            <Link href="/ContactUs">
+
             <button className="group relative flex items-center justify-center p-4 gap-2 rounded-xl border-2 border-[#D9D9D9] bg-[#1B1B1B] text-zinc-300 shadow-[4px_4px_10px_rgba(72,74,184,0.25)] hover:bg-gray-900 transition-all duration-300">
               <span className="text-xl pr-6 transition-all duration-300 group-hover:opacity-0 group-hover:-translate-x-3">
                 Connect Now
@@ -66,20 +73,21 @@ export default function HomeSections() {
                 ➜
               </span>
             </button>
+            </Link>
           </div>
 
           {/* RIGHT */}
-          <div className="flex flex-col gap-14 pl-[150px] ">
+          <div className="flex flex-col gap-14 pl-0 md:pl-[150px] sm:pl-0">
             {["Intelligence", "Robotics", "Business"].map((item) => (
               <div key={item} className="flex items-end gap-3 max-w-full ">
                 <div className="w-10 text-right text-neutral-400 pb-1 text-base font-light font-['Exo_2']">
                   your
                 </div>
                 <div className="w-full max-w-full sm:max-w-[384px]">
-                  <span className="text-zinc-900 text-5xl sm:text-5xl md:text-6xl font-normal font-['Orbitron']">
+                  <span className="text-zinc-900 text-4xl sm:text-5xl md:text-6xl font-normal font-['Orbitron']">
                     {item}{" "}
                   </span>
-                  <span className="text-neutral-400 text-4xl sm:text-5xl md:text-6xl font-normal font-['Orbitron']">
+                  <span className="text-neutral-400 text-3xl sm:text-5xl md:text-6xl font-normal font-['Orbitron']">
                     Partners
                   </span>
                 </div>

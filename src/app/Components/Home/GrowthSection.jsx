@@ -11,22 +11,20 @@ export default function GrowthSection() {
           src="/Rectangle 21.svg"
           alt="background glow"
           width={900}
-          height={900}
-          className="absolute top-1/2 left-0 -translate-y-1/2 opacity-80 blur-md"
+          height={800}
+          className="absolute top-1/2 left-0 -translate-y-1/2 opacity-90 blur-2xl"
         />
         <Image
           src="/Rectangle 22.svg"
           alt="background glow"
           width={900}
           height={900}
-          className="absolute top-1/2 right-0 -translate-y-1/2 opacity-80 blur-md"
+          className="absolute top-1/2 right-0 -translate-y-1/2 opacity-90 blur-2xl"
         />
       </div>
 
       {/* CONTENT (FULL WIDTH PADDING) */}
       <div className="relative z-10 w-full px-4 sm:px-6">
-
-        {/* CONSTRAINED CONTENT */}
         <div className="max-w-7xl mx-auto">
 
           {/* HEADING */}
@@ -82,7 +80,7 @@ export default function GrowthSection() {
                   Customer Driven Tech
                 </h3>
                 <Image 
-                src="/Customer Driven Tech icon.svg" 
+                src="/Customer driven tech icon.svg" 
                 width={30} 
                 height={30} 
                 alt="Customer Tech" />
@@ -116,4 +114,3 @@ export default function GrowthSection() {
     </section>
   );
 }
-

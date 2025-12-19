@@ -62,7 +62,7 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#1d1c20] border border-white/8 w-full max-w-[400px] px-6 py-6 rounded-xl relative overflow-hidden",
+        "bg-[#1d1c20] border border-white/8 w-full max-w-[450px] px-6 py-6 rounded-xl relative overflow-hidden",
         className
       )}>
       {children}
@@ -103,7 +103,8 @@ export const TextRevealCard = ({
         <div
           className=" overflow-hidden [mask-linear-gradient(to_bottom,transparent,white,transparent)]">
           <p
-            className="text-base sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
+            className="text-base sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-neutral-500
+">
             {text}
           </p>
           <MemoizedStars />

@@ -1,5 +1,8 @@
- import { TextRevealCard } from "@/components/ui/text-reveal-card";
+"use client";
+
+import { TextRevealCard } from "@/components/ui/text-reveal-card";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ConnectSection(){
     return(
@@ -13,7 +16,7 @@ export default function ConnectSection(){
             <div className="flex justify-center items-center gap-4 mb-[100px]">
               <TextRevealCard 
               text="You got an idea"
-              revealText="I got the solution"
+              revealText="We got the solution"
               className="text-1xl md:text-1xl font font-['Exo_2']"
               />
             </div>
@@ -68,18 +71,21 @@ export default function ConnectSection(){
             className="w-full bg-transparent border-b border-[#3A3A3A] py-3 text-white placeholder:text-[#7A7A7A] focus:outline-none resize-none mb-4"
           />
 
+          <Link href="/ContactUs">
+
           <button
            type="submit"
-           className="w-full h-16 bg-[#A6A6A6] rounded-2xl flex items-center justify-between px-6 font-['Exo_2']"
+           className="group relative w-full h-16 bg-[#969696] rounded-2xl flex items-center justify-between px-6 font-['Exo_2']"
           >
-          <span className="text-white text-base font-semibold">
+          <span className="text-white text-base font-semibold font-['Exo_2']">
            Lets Connect
           </span>
 
-          <span className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-black text-xl font">
+          <span className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-black text-xl translate-x-4">
            ➜
           </span>
          </button>
+         </Link>
 
           </form>
            </div>

@@ -5,7 +5,7 @@ import ConnectSection from "./Components/Home/ConnectSection";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HomeSections />
       <div className="h-20" />
       <GrowthSection />
@@ -14,6 +14,6 @@ export default function Home() {
       <div className="h-20" />
       <ConnectSection />
 
-    </>
+    </div>
   );  
 }

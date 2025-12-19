@@ -2,8 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const isActive = (href) => pathname === href;
+
   return (
     <nav className="w-full bg-transparent">
       <div className="mx-auto max-w-7xl flex items-center justify-between px-4 sm:px-6 md:px-0 py-6 gap-x-4 sm:gap-x-6 md:gap-x-12">
@@ -22,26 +27,44 @@ export default function Navbar() {
         </div>
 
         {/* RIGHT: Links */}
-        <div className="flex items-center gap-6">
-          <Link href="/" className="text-zinc-900 text-base font-normal font-exo2">
+        <div className="flex flex-row gap-4 sm:gap-6 text-sm sm:text-base overflow-x-auto">                
+          <Link
+            href="/"
+            className={`text-base font-normal font-exo2 ${
+              isActive("/") ? "text-zinc-900" : "text-neutral-400 hover:text-zinc-900"
+            }`}
+          >
             Home
           </Link>
 
-          <Link href="/projects" className="text-neutral-400 hover:text-zinc-900 text-base font-normal font-exo2">
+          <Link
+            href="/Projects"
+            className={`text-base font-normal font-exo2 ${
+              isActive("/Projects") ? "text-zinc-900" : "text-neutral-400 hover:text-zinc-900"
+            }`}
+          >
             Projects
           </Link>
           
-          <Link href="/about" className="text-neutral-400 hover:text-zinc-900 text-base font-normal font-exo2">
+          <Link
+            href="/AboutUs"
+            className={`text-base font-normal font-exo2 ${
+              isActive("/AboutUs") ? "text-zinc-900" : "text-neutral-400 hover:text-zinc-900"
+            }`}
+          >
             AboutUs
           </Link>
           
-          <Link href="/contact" className="text-neutral-400 hover:text-zinc-900 text-base font-normal font-exo2">
+          <Link
+            href="/ContactUs"
+            className={`text-base font-normal font-exo2 ${
+              isActive("/ContactUs") ? "text-zinc-900" : "text-neutral-400 hover:text-zinc-900"
+            }`}
+          >
             ContactUs
           </Link>
         </div>
-
       </div>
     </nav>
   );
 }
-
