@@ -14,5 +14,5 @@ permissions:
 
 jobs:
   review:
-    uses: karlmehta/argus/.github/workflows/argus-review.yml@v1
+    uses: PrathmeshCICD/argus-central/.github/workflows/argus-review.yml@v1
     secrets: inherit
